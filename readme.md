@@ -7,8 +7,9 @@ This repo has 2 projects
  Includes hot module replacement
  Idea is to configure webpack for these projects (learning curve)
  
- ## Todo Cose splitting
- # Command to test
+ ## Todo Code splitting
+ 
+ ## Command to test
  First Project
  - npm run build (by default production)
  Second Project
