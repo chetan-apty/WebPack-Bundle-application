@@ -4,8 +4,10 @@
   "description": "BareBones webpack",
   "main": "index.js",
   "scripts": {
+    "app": "node ./dist/main.js",
     "webpack:dev": "webpack -d --watch",
-    "webpack": "webpack -p"
+    "webpack": "webpack -p",
+    "debug:webpack": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --d"
   },
   "repository": {
     "type": "git"
