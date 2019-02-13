@@ -1,0 +1,10 @@
+button {
+    font: small-caps; 
+    background: yellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+}
+
+p {
+    font-weight: bolder;
+}

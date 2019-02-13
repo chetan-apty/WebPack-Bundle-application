@@ -4,9 +4,11 @@
   "description": "BareBones webpack",
   "main": "index.js",
   "scripts": {
-    "app": "node ./dist/main.js",
-    "webpack:dev": "webpack -d --watch",
-    "webpack": "webpack -p",
+    "app": "node ./dist/main*.js",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
+    "webpack:dev": "npm run webpack-dev-server -- --env.mode development --hot",
+    "build": "npm run webpack -- --env.mode production",
     "debug:webpack": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --d"
   },
   "repository": {
@@ -33,6 +35,8 @@
     "webpack": "^4.8.0",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1",
     "webpack-node-externals": "^1.7.2",
     "workbox-webpack-plugin": "^3.2.0"
   },
