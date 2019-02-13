@@ -2,6 +2,7 @@
 const webPackMerge = require('webpack-merge')
 
 const environmentConfig = mode => require(`./build-utils/webpack.${mode}`)(mode);
+const presetConfig = require('./build-utils/presets/loadPresets');
 
 module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
     return webPackMerge({
@@ -17,5 +18,7 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
                 minChunks: 2,
             }
         }
-    }, environmentConfig(mode));
+    }, 
+    environmentConfig(mode),
+    presetConfig({mode, presets}));
 }
